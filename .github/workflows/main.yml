@@ -1,8 +1,10 @@
 name: Primer Workflow
 on: push
 jobs:
-  steps:
-    - name: Instalar pytest
-      run: pip install pytest
-    - name: Ejecutar codigo
-      run: pytest test.py
+  mi_primer_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Instalar pytest
+        run: pip install pytest
+      - name: Ejecutar codigo
+        run: pytest test.py
