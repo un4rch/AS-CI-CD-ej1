@@ -10,3 +10,8 @@ jobs:
         run: pip install pytest
       - name: Ejecutar codigo
         run: pytest test.py
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: uelorriaga/holamundo
