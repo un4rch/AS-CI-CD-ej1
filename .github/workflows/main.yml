@@ -2,7 +2,10 @@ name: Primer Workflow
 on: push
 jobs:
   mi_primer_test:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOs-latest]
     steps:
       - name: Bajar codigo
         uses: actions/checkout@v4
