@@ -1,5 +1,8 @@
 name: Primer Workflow
-on: push
+on:
+  push:
+    branches:
+      - main
 jobs:
   mi_primer_test:
     runs-on: ${{matrix.os}}
