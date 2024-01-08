@@ -4,6 +4,8 @@ jobs:
   mi_primer_test:
     runs-on: ubuntu-latest
     steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
       - name: Instalar pytest
         run: pip install pytest
       - name: Ejecutar codigo
