@@ -28,10 +28,14 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Build and push
-        run: |
-          #cd app/
-          docker build -t unaielorriaga/ci-cd-app .
-          docker push unaielorriaga/ci-cd-app
-          cd ..
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: unaielorriaga/ci-cd-app
+      #- name: Build and push
+      #  run: |
+      #    cd app/
+      #    docker build -t unaielorriaga/ci-cd-app .
+      #    docker push unaielorriaga/ci-cd-app
+      #    cd ..
