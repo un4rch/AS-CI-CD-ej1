@@ -31,7 +31,7 @@ jobs:
       -
         name: Build and push
         run: |
-          cd app/
+          #cd app/
           docker build -t unaielorriaga/ci-cd-app .
           docker push unaielorriaga/ci-cd-app
           cd ..
