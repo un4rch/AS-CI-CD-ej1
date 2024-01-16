@@ -31,7 +31,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          #context: /app
+          #context: /app # Por defecto "." que es la raiz del repositorio
           push: true
           tags: unaielorriaga/ci-cd-app
       #- name: Build and push
